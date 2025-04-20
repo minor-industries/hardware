@@ -392,69 +392,41 @@
         )
       )
     )
-    (symbol "Device:D" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "D" (at 0 2.54 0)
+    (symbol "Device:R" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "R" (at 2.032 0 90)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Value" "D" (at 0 -2.54 0)
+      (property "Value" "R" (at 0 0 90)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Footprint" "" (at 0 0 0)
+      (property "Footprint" "" (at -1.778 0 90)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "Datasheet" "~" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Sim.Device" "D" (at 0 0 0)
+      (property "ki_keywords" "R res resistor" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Sim.Pins" "1=K 2=A" (at 0 0 0)
+      (property "ki_description" "Resistor" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "diode" (at 0 0 0)
+      (property "ki_fp_filters" "R_*" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Diode" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "D_0_1"
-        (polyline
-          (pts
-            (xy -1.27 1.27)
-            (xy -1.27 -1.27)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.27 0)
-            (xy -1.27 0)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 1.27 1.27)
-            (xy 1.27 -1.27)
-            (xy -1.27 0)
-            (xy 1.27 1.27)
-          )
+      (symbol "R_0_1"
+        (rectangle (start -1.016 -2.54) (end 1.016 2.54)
           (stroke (width 0.254) (type default))
           (fill (type none))
         )
       )
-      (symbol "D_1_1"
-        (pin passive line (at -3.81 0 0) (length 2.54)
-          (name "K" (effects (font (size 1.27 1.27))))
+      (symbol "R_1_1"
+        (pin passive line (at 0 3.81 270) (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 3.81 0 180) (length 2.54)
-          (name "A" (effects (font (size 1.27 1.27))))
+        (pin passive line (at 0 -3.81 90) (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
         )
       )
@@ -903,6 +875,58 @@
         )
       )
     )
+    (symbol "power:+5V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "+5V" (at 0 3.556 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "global power" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Power symbol creates a global label with name \"+5V\"" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "+5V_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "+5V_1_1"
+        (pin power_in line (at 0 0 90) (length 0) hide
+          (name "+5V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "power:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -6.35 0)
         (effects (font (size 1.27 1.27)) hide)
@@ -943,98 +967,6 @@
         )
       )
     )
-    (symbol "power:PWR_FLAG" (power) (pin_numbers hide) (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "#FLG" (at 0 1.905 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "PWR_FLAG" (at 0 3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "flag power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Special symbol for telling ERC where power comes from" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "PWR_FLAG_0_0"
-        (pin power_out line (at 0 0 90) (length 0)
-          (name "pwr" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-      (symbol "PWR_FLAG_0_1"
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 1.27)
-            (xy -1.016 1.905)
-            (xy 0 2.54)
-            (xy 1.016 1.905)
-            (xy 0 1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-    )
-    (symbol "power:VBUS" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "VBUS" (at 0 3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "global power" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"VBUS\"" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "VBUS_0_1"
-        (polyline
-          (pts
-            (xy -0.762 1.27)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy 0.762 1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "VBUS_1_1"
-        (pin power_in line (at 0 0 90) (length 0) hide
-          (name "VBUS" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
   )
 
   (junction (at 62.23 157.48) (diameter 0) (color 0 0 0 0)
@@ -1042,9 +974,6 @@
   )
   (junction (at 74.93 157.48) (diameter 0) (color 0 0 0 0)
     (uuid 4477ff2b-f5f8-4411-bc4a-4ed3efe9e989)
-  )
-  (junction (at 24.13 128.27) (diameter 0) (color 0 0 0 0)
-    (uuid 4f504c82-bbd4-4694-8c5e-3c39fea12053)
   )
   (junction (at 35.56 134.62) (diameter 0) (color 0 0 0 0)
     (uuid 5153e934-6280-4f0d-a4a6-81c6fe173d46)
@@ -1117,7 +1046,7 @@
     (stroke (width 0) (type default))
     (uuid 08da8eae-913d-42c9-b49e-a9b6f5932c7e)
   )
-  (wire (pts (xy 186.69 69.85) (xy 194.31 69.85))
+  (wire (pts (xy 165.1 95.25) (xy 176.53 95.25))
     (stroke (width 0) (type default))
     (uuid 0c090d59-0485-4d5e-b531-a2e6614953c2)
   )
@@ -1125,7 +1054,7 @@
     (stroke (width 0) (type default))
     (uuid 0cf98296-1e4f-40e5-a947-2e64c7584da2)
   )
-  (wire (pts (xy 24.13 120.65) (xy 24.13 128.27))
+  (wire (pts (xy 24.13 113.03) (xy 24.13 134.62))
     (stroke (width 0) (type default))
     (uuid 0d6b48e6-4175-4d51-bdcd-8c2f7b65ccdf)
   )
@@ -1133,7 +1062,7 @@
     (stroke (width 0) (type default))
     (uuid 0f691305-b2d8-44a7-bf66-c0fef2b757e0)
   )
-  (wire (pts (xy 186.69 72.39) (xy 194.31 72.39))
+  (wire (pts (xy 165.1 97.79) (xy 176.53 97.79))
     (stroke (width 0) (type default))
     (uuid 0f9d7534-9c44-4963-859a-13d9f6f768be)
   )
@@ -1221,7 +1150,7 @@
     (stroke (width 0) (type default))
     (uuid 53444fe4-f3a7-41ee-946c-686712836b09)
   )
-  (wire (pts (xy 186.69 64.77) (xy 207.01 64.77))
+  (wire (pts (xy 165.1 90.17) (xy 166.37 90.17))
     (stroke (width 0) (type default))
     (uuid 550ac324-e6dc-47ae-a0de-0cc9799b08bb)
   )
@@ -1248,6 +1177,10 @@
   (wire (pts (xy 68.58 134.62) (xy 74.93 134.62))
     (stroke (width 0) (type default))
     (uuid 621545ab-b65c-4e4b-9eef-124c77edc778)
+  )
+  (wire (pts (xy 204.47 43.18) (xy 208.28 43.18))
+    (stroke (width 0) (type default))
+    (uuid 62192ce7-7ae0-4f08-8cc3-95a12eb36a99)
   )
   (wire (pts (xy 149.86 125.73) (xy 162.56 125.73))
     (stroke (width 0) (type default))
@@ -1285,13 +1218,13 @@
     (stroke (width 0) (type default))
     (uuid ad721367-dfe4-4e41-820b-26f4a6770801)
   )
-  (wire (pts (xy 186.69 67.31) (xy 194.31 67.31))
+  (wire (pts (xy 165.1 92.71) (xy 176.53 92.71))
     (stroke (width 0) (type default))
     (uuid b0b0435e-ba88-4705-80f0-da908cb6e0b5)
   )
-  (wire (pts (xy 198.12 39.37) (xy 208.28 39.37))
+  (wire (pts (xy 204.47 73.66) (xy 208.28 73.66))
     (stroke (width 0) (type default))
-    (uuid ba33ed8c-741a-4ba6-b770-33a250e3d015)
+    (uuid b19060ec-9c66-44fb-a221-009badad4c1a)
   )
   (wire (pts (xy 62.23 134.62) (xy 68.58 134.62))
     (stroke (width 0) (type default))
@@ -1313,10 +1246,6 @@
     (stroke (width 0) (type default))
     (uuid c652315a-ad2f-4ef4-9977-9374238fdd4e)
   )
-  (wire (pts (xy 198.12 62.23) (xy 198.12 46.99))
-    (stroke (width 0) (type default))
-    (uuid cba5a304-2e59-4d1b-a668-ce989d466183)
-  )
   (wire (pts (xy 250.19 91.44) (xy 250.19 97.79))
     (stroke (width 0) (type default))
     (uuid cd154f30-15e5-4dc7-9293-ca879065953e)
@@ -1324,10 +1253,6 @@
   (wire (pts (xy 133.35 177.8) (xy 133.35 180.34))
     (stroke (width 0) (type default))
     (uuid cdfffdf4-66a6-4626-967e-201486053e30)
-  )
-  (wire (pts (xy 24.13 128.27) (xy 36.83 128.27))
-    (stroke (width 0) (type default))
-    (uuid d01361db-f97f-4c9a-a1f1-891364e30092)
   )
   (wire (pts (xy 143.51 177.8) (xy 133.35 177.8))
     (stroke (width 0) (type default))
@@ -1345,6 +1270,10 @@
     (stroke (width 0) (type default))
     (uuid d8d2906b-d048-4d1b-8691-30739265a191)
   )
+  (wire (pts (xy 204.47 58.42) (xy 208.28 58.42))
+    (stroke (width 0) (type default))
+    (uuid dc71d610-bc7b-4bcb-9546-d584851399be)
+  )
   (wire (pts (xy 114.3 132.08) (xy 114.3 137.16))
     (stroke (width 0) (type default))
     (uuid dfcc4ef2-1cb0-452a-984c-bb020f77bfc5)
@@ -1352,10 +1281,6 @@
   (wire (pts (xy 33.02 91.44) (xy 33.02 96.52))
     (stroke (width 0) (type default))
     (uuid e9b82376-e121-44e5-a40b-e8da1c5523c1)
-  )
-  (wire (pts (xy 24.13 128.27) (xy 24.13 134.62))
-    (stroke (width 0) (type default))
-    (uuid ee417ac4-2c51-481e-94c7-0a7f177439b0)
   )
   (wire (pts (xy 35.56 137.16) (xy 35.56 134.62))
     (stroke (width 0) (type default))
@@ -1365,7 +1290,7 @@
     (stroke (width 0) (type default))
     (uuid f8ef1f23-4765-492b-b3aa-d0a9bbddaa9e)
   )
-  (wire (pts (xy 186.69 62.23) (xy 198.12 62.23))
+  (wire (pts (xy 165.1 87.63) (xy 167.64 87.63))
     (stroke (width 0) (type default))
     (uuid f9b4d458-2bcd-440d-9421-67fc4b39fe51)
   )
@@ -1404,7 +1329,7 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 0f4ebaf1-deb7-4382-8196-4306bbb4ef2e)
   )
-  (label "NES_CLOCK_5V" (at 194.31 72.39 0) (fields_autoplaced)
+  (label "NES_CLOCK_5V" (at 176.53 97.79 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 1b093554-a3d6-45a9-9f91-ad9925091796)
   )
@@ -1428,7 +1353,7 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 39792bcb-c4c4-4c78-8efe-4d7ebd33c2f8)
   )
-  (label "NES_DATA" (at 194.31 67.31 0) (fields_autoplaced)
+  (label "NES_DATA" (at 176.53 92.71 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 3ea2125e-32a4-48ed-bb8b-c09e1298929c)
   )
@@ -1440,17 +1365,17 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 46c85241-311e-4eac-9424-73adb0358fdb)
   )
-  (label "NES_LATCH_5V" (at 194.31 69.85 0) (fields_autoplaced)
+  (label "NES_LATCH_5V" (at 176.53 95.25 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5218442e-5071-4458-bb23-d2941f27d207)
+  )
+  (label "PAD_DATA_1" (at 204.47 43.18 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid 540e3fb8-5e49-4c26-b42f-a3c58993c156)
   )
   (label "SWCLK" (at 143.51 170.18 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 597da575-58b1-4f52-b916-fa548dca1b39)
-  )
-  (label "+5V*" (at 208.28 39.37 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 5af599c6-03f8-49fe-a405-609395277a57)
   )
   (label "NES_CLOCK_3V" (at 162.56 130.81 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
@@ -1492,25 +1417,25 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid b55e3b48-fea3-401f-a24b-4f572ed093a2)
   )
-  (label "+5V*" (at 24.13 124.46 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right bottom))
-    (uuid c6cbd830-edf5-4bab-8447-94324e864918)
-  )
   (label "PAD_LATCH" (at 252.73 72.39 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid c9e4e699-c2ed-4acc-8fc7-594dc91496e4)
+  )
+  (label "NES_DATA" (at 204.47 73.66 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid cdfecfb1-0601-4404-9f54-e01066ec2b38)
   )
   (label "SWDIO" (at 88.9 121.92 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid d261b56a-af63-48fd-9504-3685db5199b5)
   )
-  (label "NES_5V" (at 198.12 62.23 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid d3fe3c97-169e-4e60-b812-f08560c7f151)
-  )
   (label "PAD_CLOCK" (at 88.9 50.8 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid e76bc281-afac-48f9-849c-f8c439e559fe)
+  )
+  (label "PAD_DATA_2" (at 204.47 58.42 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid e897e39d-cefc-4405-bf0a-7a8559e8bdf6)
   )
   (label "RESET" (at 143.51 172.72 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
@@ -1555,34 +1480,9 @@
     (pin "8" (uuid f9845f8b-b64f-4f90-95a0-813e23ce2a81))
     (pin "9" (uuid fc9f9e86-1531-4946-a261-f7f56b5e6f0b))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "U1") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:VBUS") (at 44.45 69.85 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 0aafd220-68f6-41dc-a65c-134eadae47cb)
-    (property "Reference" "#PWR027" (at 44.45 73.66 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "VBUS" (at 44.45 64.77 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 44.45 69.85 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 44.45 69.85 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 74381231-325e-4594-ae0e-055605cb0882))
-    (instances
-      (project "nes-controller-v3"
-        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
-          (reference "#PWR027") (unit 1)
         )
       )
     )
@@ -1605,7 +1505,7 @@
     )
     (pin "1" (uuid e9832860-4a02-4b4a-be65-34471cdea4c5))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR02") (unit 1)
         )
@@ -1630,9 +1530,60 @@
     )
     (pin "1" (uuid d5279dbb-4b25-4c35-b9ac-5712ebea0cd3))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR010") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 208.28 39.37 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 12e693b0-f513-4000-a423-45b7439c8454)
+    (property "Reference" "R2" (at 210.82 38.1 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "10k" (at 210.82 40.64 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 206.502 39.37 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 208.28 39.37 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 0f5c02b8-908b-430d-870b-248846012c5c))
+    (pin "2" (uuid a4cf045d-9d81-46e3-8c31-711bd8724788))
+    (instances
+      (project "nes-controller-v4"
+        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
+          (reference "R2") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+5V") (at 44.45 69.85 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 24cfef52-8bf0-4b56-b946-9aa6f312526a)
+    (property "Reference" "#PWR016" (at 44.45 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+5V" (at 44.45 64.77 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 44.45 69.85 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 44.45 69.85 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 744b1151-67ab-4d16-8e7e-2488d7bf28fd))
+    (instances
+      (project "nes-controller-v4"
+        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
+          (reference "#PWR016") (unit 1)
         )
       )
     )
@@ -1659,7 +1610,7 @@
     (pin "4" (uuid 61f49e93-1b96-458c-9565-51057d805a46))
     (pin "5" (uuid 35c442dc-e878-4b0f-b5f2-f4ba94c1c975))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "U2") (unit 1)
         )
@@ -1688,7 +1639,7 @@
     (pin "4" (uuid 0c19580d-87fc-44c6-b19f-dc85bf4d00cc))
     (pin "5" (uuid 4e2871a9-02cb-49d5-a00c-8e2e9d55c51c))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "U4") (unit 1)
         )
@@ -1696,26 +1647,26 @@
     )
   )
 
-  (symbol (lib_id "power:PWR_FLAG") (at 36.83 128.27 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 3fdffdd4-5e26-428b-afd7-e298be3f6ef8)
-    (property "Reference" "#FLG02" (at 36.83 126.365 0)
+  (symbol (lib_id "power:+5V") (at 167.64 87.63 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 3db37f2d-6d24-40ac-bd8d-243195522357)
+    (property "Reference" "#PWR014" (at 167.64 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "PWR_FLAG" (at 36.83 123.19 0)
+    (property "Value" "+5V" (at 167.64 82.55 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 36.83 128.27 0)
+    (property "Footprint" "" (at 167.64 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 36.83 128.27 0)
+    (property "Datasheet" "" (at 167.64 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 42f702b8-7525-4133-ba32-b66b72624583))
+    (pin "1" (uuid 6338609a-2afe-4a42-b6be-9a75dce9ec88))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
-          (reference "#FLG02") (unit 1)
+          (reference "#PWR014") (unit 1)
         )
       )
     )
@@ -1743,7 +1694,7 @@
           (reference "#PWR015") (unit 1)
         )
       )
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR033") (unit 1)
         )
@@ -1768,41 +1719,9 @@
     )
     (pin "1" (uuid 7b83b6dc-629e-498d-bcd2-e2151a8be595))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR06") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 198.12 43.18 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 4c0047cc-f96a-465b-bc56-31b0db1e27f7)
-    (property "Reference" "D1" (at 200.66 41.91 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "D" (at 200.66 44.45 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Diode_SMD:D_0805_2012Metric" (at 198.12 43.18 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 198.12 43.18 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 198.12 43.18 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 198.12 43.18 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 771e8536-07a9-4992-b8bf-495e62155a49))
-    (pin "2" (uuid 0922af07-8699-489b-a716-f7191e34f1ab))
-    (instances
-      (project "nes-controller-v3"
-        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
-          (reference "D1") (unit 1)
         )
       )
     )
@@ -1826,34 +1745,9 @@
     (pin "1" (uuid c71d52e1-f30b-478b-9e07-5de344643f50))
     (pin "2" (uuid d08e1f25-7a85-4e93-aa1d-d1f42bdb4f21))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "C1") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:VBUS") (at 24.13 113.03 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 574d5dc9-cd0a-4c0d-bafc-b14fe43de223)
-    (property "Reference" "#PWR05" (at 24.13 116.84 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "VBUS" (at 24.13 107.95 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 24.13 113.03 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 24.13 113.03 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid f703e7fb-863f-4a90-83fc-5ab6fbab23f0))
-    (instances
-      (project "nes-controller-v3"
-        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
-          (reference "#PWR05") (unit 1)
         )
       )
     )
@@ -1880,7 +1774,7 @@
     (pin "4" (uuid 3627f536-326f-4f62-8b91-91dca47965f9))
     (pin "5" (uuid e27b2ff9-c9c7-479b-8aa6-addbc46e061d))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "U3") (unit 1)
         )
@@ -1905,7 +1799,7 @@
     )
     (pin "1" (uuid fac20c43-f773-421d-9d2a-ff22dde29341))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR09") (unit 1)
         )
@@ -1930,7 +1824,7 @@
     )
     (pin "1" (uuid c50c9283-3540-4d9e-b1a9-2eb034bc2c4e))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR01") (unit 1)
         )
@@ -1960,7 +1854,7 @@
     (pin "5" (uuid 93550ab7-f7fc-4b91-b4b9-653f48798eb2))
     (pin "6" (uuid f8ffbebb-7b7a-42d7-9d2b-e1e12a1c4a2b))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "J3") (unit 1)
         )
@@ -1985,7 +1879,7 @@
     )
     (pin "1" (uuid 6db63be4-c074-484c-b38f-e87ef340e03f))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR07") (unit 1)
         )
@@ -2010,7 +1904,7 @@
     )
     (pin "1" (uuid 4bc42a26-bed4-4ff0-bf26-5d7e37973d70))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR015") (unit 1)
         )
@@ -2018,19 +1912,19 @@
     )
   )
 
-  (symbol (lib_id "Connector:Conn_01x05_Pin") (at 181.61 67.31 0) (unit 1)
+  (symbol (lib_id "Connector:Conn_01x05_Pin") (at 160.02 92.71 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7d75ab19-f14f-40ad-a352-309f0f8f27d5)
-    (property "Reference" "J2" (at 182.245 57.15 0)
+    (property "Reference" "J2" (at 160.655 82.55 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "NES" (at 182.245 59.69 0)
+    (property "Value" "NES" (at 160.655 85.09 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Connector_Wire:SolderWire-0.15sqmm_1x05_P4mm_D0.5mm_OD1.5mm_Relief" (at 181.61 67.31 0)
+    (property "Footprint" "Connector_Wire:SolderWire-0.15sqmm_1x05_P4mm_D0.5mm_OD1.5mm_Relief" (at 160.02 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 181.61 67.31 0)
+    (property "Datasheet" "~" (at 160.02 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 7590252f-5393-4175-9fc9-2754519ce8f7))
@@ -2039,7 +1933,7 @@
     (pin "4" (uuid 987624cc-a65e-4dab-a82d-1c848c979def))
     (pin "5" (uuid 6f8c30d4-7ebd-4a18-989c-53d6f8cddf32))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "J2") (unit 1)
         )
@@ -2069,9 +1963,34 @@
           (reference "#PWR01") (unit 1)
         )
       )
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR026") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 208.28 66.04 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 8ca59b16-3686-4f4e-9147-dfce3d9ff5b9)
+    (property "Reference" "#PWR020" (at 208.28 69.85 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 208.28 60.96 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 208.28 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 208.28 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 2232bf35-cb5f-42d1-9fed-36435ad6f05d))
+    (instances
+      (project "nes-controller-v4"
+        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
+          (reference "#PWR020") (unit 1)
         )
       )
     )
@@ -2095,7 +2014,7 @@
     (pin "1" (uuid 5d51f412-2296-414a-bfd3-2e9f4ccd26f5))
     (pin "2" (uuid 5c039ce3-e726-47b3-a75c-fd3d7855eeb3))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "C7") (unit 1)
         )
@@ -2120,7 +2039,7 @@
     )
     (pin "1" (uuid 2b4dddea-be68-4a59-a54d-c8c048423c2b))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR012") (unit 1)
         )
@@ -2149,7 +2068,7 @@
           (reference "H3") (unit 1)
         )
       )
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "H2") (unit 1)
         )
@@ -2157,24 +2076,49 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 207.01 64.77 90) (unit 1)
+  (symbol (lib_id "power:+5V") (at 24.13 113.03 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid a818d858-c8ae-4d2e-b5b0-f546c4078493)
+    (property "Reference" "#PWR05" (at 24.13 116.84 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+5V" (at 24.13 107.95 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 24.13 113.03 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 24.13 113.03 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 4aafcb43-028a-4346-bf42-cbc986565110))
+    (instances
+      (project "nes-controller-v4"
+        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
+          (reference "#PWR05") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 166.37 90.17 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a972b45b-9581-4dda-824d-4afbb56f6146)
-    (property "Reference" "#PWR013" (at 213.36 64.77 0)
+    (property "Reference" "#PWR013" (at 172.72 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 210.82 64.77 90)
+    (property "Value" "GND" (at 170.18 90.17 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 207.01 64.77 0)
+    (property "Footprint" "" (at 166.37 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 207.01 64.77 0)
+    (property "Datasheet" "" (at 166.37 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid d0e81615-db69-49b1-8b49-d5a3bfbcadb9))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR013") (unit 1)
         )
@@ -2199,9 +2143,35 @@
     )
     (pin "1" (uuid ea00653c-3ca0-44dc-b9d4-2fd6fbf54c5e))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR04") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 208.28 69.85 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid ad790827-7206-44cd-aa96-e3547199b7de)
+    (property "Reference" "R4" (at 210.82 68.58 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "10k" (at 210.82 71.12 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 206.502 69.85 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 208.28 69.85 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 60d07a6d-52fd-4237-885e-4352b20b128b))
+    (pin "2" (uuid b5b12f30-71a8-40ae-8d35-b0965be82061))
+    (instances
+      (project "nes-controller-v4"
+        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
+          (reference "R4") (unit 1)
         )
       )
     )
@@ -2260,7 +2230,7 @@
           (reference "U1") (unit 1)
         )
       )
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "U7") (unit 1)
         )
@@ -2290,9 +2260,34 @@
           (reference "#PWR06") (unit 1)
         )
       )
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR035") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 208.28 35.56 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid bb039e3d-903d-4a4e-8d13-e9310b694169)
+    (property "Reference" "#PWR017" (at 208.28 39.37 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 208.28 30.48 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 208.28 35.56 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 208.28 35.56 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 72584e23-5601-42a7-8e89-cf8bf650b628))
+    (instances
+      (project "nes-controller-v4"
+        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
+          (reference "#PWR017") (unit 1)
         )
       )
     )
@@ -2321,7 +2316,7 @@
           (reference "C5") (unit 1)
         )
       )
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "C4") (unit 1)
         )
@@ -2350,7 +2345,7 @@
           (reference "H1") (unit 1)
         )
       )
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "H1") (unit 1)
         )
@@ -2376,7 +2371,7 @@
     (pin "1" (uuid cfa8599a-33f6-41c4-b4d1-0beeb1ff1998))
     (pin "2" (uuid acd9e29f-6eca-4307-9d69-818331797e04))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "C8") (unit 1)
         )
@@ -2401,7 +2396,7 @@
     )
     (pin "1" (uuid ee269cb9-4092-4463-b792-fd49fd7688a3))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR08") (unit 1)
         )
@@ -2430,9 +2425,35 @@
           (reference "H4") (unit 1)
         )
       )
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "H3") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 208.28 54.61 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid dc4bcb7f-ace5-463c-af34-486736840d00)
+    (property "Reference" "R3" (at 210.82 53.34 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "10k" (at 210.82 55.88 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 206.502 54.61 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 208.28 54.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 49b2132b-d608-4178-bca1-1fbc8ec872de))
+    (pin "2" (uuid c8946be1-d749-438f-b4b4-bd2124e20ff0))
+    (instances
+      (project "nes-controller-v4"
+        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
+          (reference "R3") (unit 1)
         )
       )
     )
@@ -2465,7 +2486,7 @@
           (reference "J3") (unit 1)
         )
       )
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "J1") (unit 1)
         )
@@ -2490,7 +2511,7 @@
     )
     (pin "1" (uuid 3aa22387-bd6b-4e44-a668-220178099978))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR018") (unit 1)
         )
@@ -2515,7 +2536,7 @@
     )
     (pin "1" (uuid cef8d9ee-e522-4575-af73-5c2154cc6d74))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR03") (unit 1)
         )
@@ -2541,9 +2562,34 @@
     (pin "1" (uuid 11b800c2-a195-4018-b687-bb5809e5ed92))
     (pin "2" (uuid 7e23ae07-2c7f-4f3e-9bca-1ed7f81f3f04))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "C2") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 208.28 50.8 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid f64d8110-fae0-42a5-8923-dc2d9b27df9b)
+    (property "Reference" "#PWR019" (at 208.28 54.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 208.28 45.72 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 208.28 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 208.28 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid a5d49e96-8f87-4f8a-af5f-6f2ac67df86f))
+    (instances
+      (project "nes-controller-v4"
+        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
+          (reference "#PWR019") (unit 1)
         )
       )
     )
@@ -2566,41 +2612,9 @@
     )
     (pin "1" (uuid 3ca8695b-5ab5-444d-a495-f6d2b411ecab))
     (instances
-      (project "nes-controller-v3"
+      (project "nes-controller-v4"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR011") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:D") (at 24.13 116.84 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid faf6b853-28d4-4d81-9493-faeddf156903)
-    (property "Reference" "D2" (at 26.67 115.57 90)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Value" "D" (at 26.67 118.11 90)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "Diode_SMD:D_0805_2012Metric" (at 24.13 116.84 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 24.13 116.84 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "D" (at 24.13 116.84 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=K 2=A" (at 24.13 116.84 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 8aa3cba7-41e3-4588-88d6-fafa1cf3259c))
-    (pin "2" (uuid 80643928-1d74-4f33-a3ec-e18a7bdfd735))
-    (instances
-      (project "nes-controller-v3"
-        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
-          (reference "D2") (unit 1)
         )
       )
     )
