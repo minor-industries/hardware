@@ -617,48 +617,6 @@
         )
       )
     )
-    (symbol "Minor_Industries:Nes_Controller_Port" (in_bom yes) (on_board yes)
-      (property "Reference" "U" (at 0 0 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "Nes_Controller_Port_0_1"
-        (rectangle (start -5.08 6.35) (end 5.08 -8.89)
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "Nes_Controller_Port_1_1"
-        (pin power_in line (at -7.62 3.81 0) (length 2.54)
-          (name "5V" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at -7.62 1.27 0) (length 2.54)
-          (name "G" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin output line (at -7.62 -1.27 0) (length 2.54)
-          (name "D" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -7.62 -3.81 0) (length 2.54)
-          (name "L" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -7.62 -6.35 0) (length 2.54)
-          (name "C" (effects (font (size 1.27 1.27))))
-          (number "5" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
     (symbol "Minor_Industries:SN74LVC125ADR" (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (at 30.48 10.16 0)
         (effects (font (size 1.524 1.524)))
@@ -769,6 +727,102 @@
         (pin input line (at 60.96 -12.7 180) (length 7.62)
           (name "3A" (effects (font (size 1.27 1.27))))
           (number "9" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "Minor_Industries:SNES_Controller_Socket" (pin_names (offset 5.08)) (in_bom yes) (on_board yes)
+      (property "Reference" "J" (at 0 17.78 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "SNES_Controller_Socket" (at 0 20.32 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "Nintendo:SNES_Controller_Socket" (at -11.43 1.27 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "" (at -11.43 1.27 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "SNES_Controller_Socket_0_1"
+        (arc (start -2.54 -11.469) (mid 0 -13.9703) (end 2.54 -11.469)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (circle (center 0 -11.43) (radius 1.27)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (circle (center 0 -7.62) (radius 1.27)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (circle (center 0 -3.81) (radius 1.27)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -2.54 -1.27)
+            (xy 2.54 -1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 2.54 -11.43)
+            (xy 2.54 15.24)
+            (xy -2.54 15.24)
+            (xy -2.54 -11.43)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (circle (center 0 1.27) (radius 1.27)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (circle (center 0 5.08) (radius 1.27)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (circle (center 0 8.89) (radius 1.27)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (circle (center 0 12.7) (radius 1.27)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "SNES_Controller_Socket_1_1"
+        (pin passive line (at -6.35 12.7 0) (length 5.08)
+          (name "VCC" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin input line (at -6.35 8.89 0) (length 5.08)
+          (name "Clock" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+        (pin input line (at -6.35 5.08 0) (length 5.08)
+          (name "Latch" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))
+        )
+        (pin output line (at -6.35 1.27 0) (length 5.08)
+          (name "Data" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27))))
+        )
+        (pin no_connect line (at -6.35 -3.81 0) (length 5.08)
+          (name "NC" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27))))
+        )
+        (pin no_connect line (at -6.35 -7.62 0) (length 5.08)
+          (name "NC" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -6.35 -11.43 0) (length 5.08)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "7" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -1066,10 +1120,6 @@
     (stroke (width 0) (type default))
     (uuid 0f9d7534-9c44-4963-859a-13d9f6f768be)
   )
-  (wire (pts (xy 250.19 97.79) (xy 252.73 97.79))
-    (stroke (width 0) (type default))
-    (uuid 1532ad26-3bc1-433c-ae60-e9ee851c19cc)
-  )
   (wire (pts (xy 74.93 134.62) (xy 74.93 140.97))
     (stroke (width 0) (type default))
     (uuid 19c7d00a-54b9-472e-96a0-969404be22b3)
@@ -1126,10 +1176,6 @@
     (stroke (width 0) (type default))
     (uuid 3f261ed8-3ead-4e92-a8fd-08105c5c8376)
   )
-  (wire (pts (xy 240.03 100.33) (xy 252.73 100.33))
-    (stroke (width 0) (type default))
-    (uuid 4798e970-cf34-4900-8685-0ce40e0d675b)
-  )
   (wire (pts (xy 88.9 55.88) (xy 96.52 55.88))
     (stroke (width 0) (type default))
     (uuid 4944f3fb-d97a-4481-8454-78b9f5b20cdd)
@@ -1137,10 +1183,6 @@
   (wire (pts (xy 86.36 148.59) (xy 86.36 157.48))
     (stroke (width 0) (type default))
     (uuid 4a6ff2ea-134c-4c76-8324-97bb905f922f)
-  )
-  (wire (pts (xy 240.03 67.31) (xy 252.73 67.31))
-    (stroke (width 0) (type default))
-    (uuid 4a95540a-11e5-4133-a02e-e919dcb31fb5)
   )
   (wire (pts (xy 62.23 148.59) (xy 62.23 157.48))
     (stroke (width 0) (type default))
@@ -1230,25 +1272,13 @@
     (stroke (width 0) (type default))
     (uuid bc335e54-057b-4f67-be4a-248fcdd67c08)
   )
-  (wire (pts (xy 250.19 58.42) (xy 250.19 64.77))
-    (stroke (width 0) (type default))
-    (uuid be1c2b84-d337-4b94-8f5e-61992f3df349)
-  )
   (wire (pts (xy 149.86 118.11) (xy 162.56 118.11))
     (stroke (width 0) (type default))
     (uuid c13bf630-4581-4b8b-a703-729b83c5fdc8)
   )
-  (wire (pts (xy 250.19 64.77) (xy 252.73 64.77))
-    (stroke (width 0) (type default))
-    (uuid c5747b41-54fd-4418-9066-24349b4a3eb0)
-  )
   (wire (pts (xy 24.13 134.62) (xy 35.56 134.62))
     (stroke (width 0) (type default))
     (uuid c652315a-ad2f-4ef4-9977-9374238fdd4e)
-  )
-  (wire (pts (xy 250.19 91.44) (xy 250.19 97.79))
-    (stroke (width 0) (type default))
-    (uuid cd154f30-15e5-4dc7-9293-ca879065953e)
   )
   (wire (pts (xy 133.35 177.8) (xy 133.35 180.34))
     (stroke (width 0) (type default))
@@ -1317,7 +1347,7 @@
     (uuid faa55e16-2bab-49f1-b22f-26ab9c2c8b36)
   )
 
-  (label "PAD_DATA_2" (at 252.73 102.87 180) (fields_autoplaced)
+  (label "PAD_DATA_2" (at 256.54 91.44 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 02685afb-f4d9-4d8f-a949-8ea00ddae098)
   )
@@ -1329,13 +1359,13 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 0f4ebaf1-deb7-4382-8196-4306bbb4ef2e)
   )
+  (label "PAD_LATCH" (at 256.54 87.63 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid 1390abec-d3e0-4977-8dce-bdeee4a9c9da)
+  )
   (label "NES_CLOCK_5V" (at 176.53 97.79 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 1b093554-a3d6-45a9-9f91-ad9925091796)
-  )
-  (label "PAD_CLOCK" (at 252.73 107.95 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right bottom))
-    (uuid 20ff8fe9-6841-4d7d-8a5f-79b14168f5a2)
   )
   (label "NES_CLOCK_5V" (at 162.56 128.27 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
@@ -1393,7 +1423,11 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 80235557-671b-40dd-ba4f-c1a95f8adf9a)
   )
-  (label "PAD_DATA_1" (at 252.73 69.85 180) (fields_autoplaced)
+  (label "PAD_CLOCK" (at 256.54 83.82 180) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid 81da67ea-30e6-4507-9dd9-c4f25a625e25)
+  )
+  (label "PAD_DATA_1" (at 256.54 53.34 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 923b291b-d96a-40ce-9c0e-3624cdc327c2)
   )
@@ -1401,7 +1435,7 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 927be57a-57c3-4f10-8e14-dbeaf25b7f71)
   )
-  (label "PAD_CLOCK" (at 252.73 74.93 180) (fields_autoplaced)
+  (label "PAD_CLOCK" (at 256.54 45.72 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 9d7e3d06-b876-4601-92f8-4e6cb75ee4e6)
   )
@@ -1417,7 +1451,7 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid b55e3b48-fea3-401f-a24b-4f572ed093a2)
   )
-  (label "PAD_LATCH" (at 252.73 72.39 180) (fields_autoplaced)
+  (label "PAD_LATCH" (at 256.54 49.53 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid c9e4e699-c2ed-4acc-8fc7-594dc91496e4)
   )
@@ -1444,10 +1478,6 @@
   (label "RESET" (at 88.9 127 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid f8a4d36f-6319-4164-ad56-df717ddd0a74)
-  )
-  (label "PAD_LATCH" (at 252.73 105.41 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right bottom))
-    (uuid fa42ae3b-a098-4708-9f17-2af6a581b859)
   )
 
   (symbol (lib_id "Minor_Industries:SN74LVC125ADR") (at 162.56 118.11 0) (unit 1)
@@ -1480,7 +1510,7 @@
     (pin "8" (uuid f9845f8b-b64f-4f90-95a0-813e23ce2a81))
     (pin "9" (uuid fc9f9e86-1531-4946-a261-f7f56b5e6f0b))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "U1") (unit 1)
         )
@@ -1488,24 +1518,24 @@
     )
   )
 
-  (symbol (lib_id "power:+3V3") (at 250.19 58.42 0) (unit 1)
+  (symbol (lib_id "power:+3V3") (at 256.54 41.91 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0c934c1f-ccee-48cd-90b1-e45390c98fe7)
-    (property "Reference" "#PWR02" (at 250.19 62.23 0)
+    (property "Reference" "#PWR02" (at 256.54 45.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3V3" (at 250.19 53.34 0)
+    (property "Value" "+3V3" (at 256.54 36.83 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 250.19 58.42 0)
+    (property "Footprint" "" (at 256.54 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 250.19 58.42 0)
+    (property "Datasheet" "" (at 256.54 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid e9832860-4a02-4b4a-be65-34471cdea4c5))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR02") (unit 1)
         )
@@ -1530,7 +1560,7 @@
     )
     (pin "1" (uuid d5279dbb-4b25-4c35-b9ac-5712ebea0cd3))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR010") (unit 1)
         )
@@ -1556,7 +1586,7 @@
     (pin "1" (uuid 0f5c02b8-908b-430d-870b-248846012c5c))
     (pin "2" (uuid a4cf045d-9d81-46e3-8c31-711bd8724788))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "R2") (unit 1)
         )
@@ -1581,9 +1611,34 @@
     )
     (pin "1" (uuid 744b1151-67ab-4d16-8e7e-2488d7bf28fd))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR016") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3V3") (at 256.54 80.01 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 250f3eab-6337-4ac6-9498-d336fda80e78)
+    (property "Reference" "#PWR07" (at 256.54 83.82 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3" (at 256.54 74.93 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 256.54 80.01 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 256.54 80.01 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid b6c08a2a-6a9a-4cea-95eb-f15e9617b9f8))
+    (instances
+      (project "snes-controller-v1"
+        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -1610,38 +1665,9 @@
     (pin "4" (uuid 61f49e93-1b96-458c-9565-51057d805a46))
     (pin "5" (uuid 35c442dc-e878-4b0f-b5f2-f4ba94c1c975))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "U2") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Minor_Industries:Nes_Controller_Port") (at 260.35 101.6 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 303272bd-9ea9-4ced-b66e-fdd133ea06c1)
-    (property "Reference" "U4" (at 266.7 102.87 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "~" (at 260.35 101.6 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Minor_Industries:NES controller port" (at 260.35 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 260.35 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid be86b85f-c08c-429e-92f8-2b3d95f6b23f))
-    (pin "2" (uuid 5ed3d7a8-a5ef-4c89-883c-02dc28455640))
-    (pin "3" (uuid 20fb4310-95f1-431d-a35f-359063e2cc9c))
-    (pin "4" (uuid 0c19580d-87fc-44c6-b19f-dc85bf4d00cc))
-    (pin "5" (uuid 4e2871a9-02cb-49d5-a00c-8e2e9d55c51c))
-    (instances
-      (project "nes-controller-v4"
-        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
-          (reference "U4") (unit 1)
         )
       )
     )
@@ -1664,7 +1690,7 @@
     )
     (pin "1" (uuid 6338609a-2afe-4a42-b6be-9a75dce9ec88))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR014") (unit 1)
         )
@@ -1694,7 +1720,7 @@
           (reference "#PWR015") (unit 1)
         )
       )
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR033") (unit 1)
         )
@@ -1719,7 +1745,7 @@
     )
     (pin "1" (uuid 7b83b6dc-629e-498d-bcd2-e2151a8be595))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR06") (unit 1)
         )
@@ -1745,7 +1771,7 @@
     (pin "1" (uuid c71d52e1-f30b-478b-9e07-5de344643f50))
     (pin "2" (uuid d08e1f25-7a85-4e93-aa1d-d1f42bdb4f21))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "C1") (unit 1)
         )
@@ -1753,30 +1779,32 @@
     )
   )
 
-  (symbol (lib_id "Minor_Industries:Nes_Controller_Port") (at 260.35 68.58 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 59ff29ef-24d5-44b7-9e67-f9d55fe649da)
-    (property "Reference" "U3" (at 266.7 69.85 0)
+  (symbol (lib_id "Minor_Industries:SNES_Controller_Socket") (at 262.89 54.61 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 572026fd-6d70-431a-af99-c1624d337faa)
+    (property "Reference" "J4" (at 266.7 52.7051 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "~" (at 260.35 68.58 0)
-      (effects (font (size 1.27 1.27)))
+    (property "Value" "SNES_Controller_Socket" (at 274.32 64.77 90)
+      (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Minor_Industries:NES controller port" (at 260.35 68.58 0)
+    (property "Footprint" "Nintendo:SNES_Controller_Socket" (at 251.46 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 260.35 68.58 0)
+    (property "Datasheet" "" (at 251.46 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 08af9fc3-e721-4627-8430-996bb62712cc))
-    (pin "2" (uuid a38acf1c-d81a-4b50-a4a5-0ef26730243d))
-    (pin "3" (uuid 98b7ff04-ab38-4acd-b001-011c596d3bc6))
-    (pin "4" (uuid 3627f536-326f-4f62-8b91-91dca47965f9))
-    (pin "5" (uuid e27b2ff9-c9c7-479b-8aa6-addbc46e061d))
+    (pin "1" (uuid 0e25bcac-d9c0-4678-a0f5-ae6cadff04ea))
+    (pin "2" (uuid 332cd2ef-4c18-4261-8c13-cf433a745eb3))
+    (pin "3" (uuid e034616c-7d08-4df8-9f20-d2f1cdd2bc22))
+    (pin "4" (uuid ed61eab5-db68-4169-90a5-549c3340cd48))
+    (pin "5" (uuid 8278cd6e-98dd-419d-b7ef-dd6499ac91e2))
+    (pin "6" (uuid 9878ed3b-2282-4924-bfe1-b409c29a1c3c))
+    (pin "7" (uuid fcabb004-5421-4464-ace2-cafcae562b79))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
-          (reference "U3") (unit 1)
+          (reference "J4") (unit 1)
         )
       )
     )
@@ -1799,7 +1827,7 @@
     )
     (pin "1" (uuid fac20c43-f773-421d-9d2a-ff22dde29341))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR09") (unit 1)
         )
@@ -1824,7 +1852,7 @@
     )
     (pin "1" (uuid c50c9283-3540-4d9e-b1a9-2eb034bc2c4e))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR01") (unit 1)
         )
@@ -1854,59 +1882,9 @@
     (pin "5" (uuid 93550ab7-f7fc-4b91-b4b9-653f48798eb2))
     (pin "6" (uuid f8ffbebb-7b7a-42d7-9d2b-e1e12a1c4a2b))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "J3") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3V3") (at 250.19 91.44 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 7c77f097-236f-4627-a66d-3ef318e9287f)
-    (property "Reference" "#PWR07" (at 250.19 95.25 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3V3" (at 250.19 86.36 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 250.19 91.44 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 250.19 91.44 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 6db63be4-c074-484c-b38f-e87ef340e03f))
-    (instances
-      (project "nes-controller-v4"
-        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
-          (reference "#PWR07") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 240.03 100.33 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 7c8123cf-3c38-487a-83ee-64e393f302b0)
-    (property "Reference" "#PWR015" (at 233.68 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 236.22 100.33 90)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "" (at 240.03 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 240.03 100.33 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4bc42a26-bed4-4ff0-bf26-5d7e37973d70))
-    (instances
-      (project "nes-controller-v4"
-        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
-          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -1933,7 +1911,7 @@
     (pin "4" (uuid 987624cc-a65e-4dab-a82d-1c848c979def))
     (pin "5" (uuid 6f8c30d4-7ebd-4a18-989c-53d6f8cddf32))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "J2") (unit 1)
         )
@@ -1963,7 +1941,7 @@
           (reference "#PWR01") (unit 1)
         )
       )
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR026") (unit 1)
         )
@@ -1988,7 +1966,7 @@
     )
     (pin "1" (uuid 2232bf35-cb5f-42d1-9fed-36435ad6f05d))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR020") (unit 1)
         )
@@ -2014,7 +1992,7 @@
     (pin "1" (uuid 5d51f412-2296-414a-bfd3-2e9f4ccd26f5))
     (pin "2" (uuid 5c039ce3-e726-47b3-a75c-fd3d7855eeb3))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "C7") (unit 1)
         )
@@ -2039,7 +2017,7 @@
     )
     (pin "1" (uuid 2b4dddea-be68-4a59-a54d-c8c048423c2b))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR012") (unit 1)
         )
@@ -2068,7 +2046,7 @@
           (reference "H3") (unit 1)
         )
       )
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "H2") (unit 1)
         )
@@ -2093,7 +2071,7 @@
     )
     (pin "1" (uuid 4aafcb43-028a-4346-bf42-cbc986565110))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR05") (unit 1)
         )
@@ -2118,7 +2096,7 @@
     )
     (pin "1" (uuid d0e81615-db69-49b1-8b49-d5a3bfbcadb9))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR013") (unit 1)
         )
@@ -2126,24 +2104,24 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 240.03 67.31 270) (unit 1)
+  (symbol (lib_id "power:GND") (at 256.54 66.04 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ad0a220d-9a09-4e3c-9950-a43d37e86d94)
-    (property "Reference" "#PWR04" (at 233.68 67.31 0)
+    (property "Reference" "#PWR04" (at 250.19 66.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 236.22 67.31 90)
+    (property "Value" "GND" (at 252.73 66.04 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 240.03 67.31 0)
+    (property "Footprint" "" (at 256.54 66.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 240.03 67.31 0)
+    (property "Datasheet" "" (at 256.54 66.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid ea00653c-3ca0-44dc-b9d4-2fd6fbf54c5e))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR04") (unit 1)
         )
@@ -2169,7 +2147,7 @@
     (pin "1" (uuid 60d07a6d-52fd-4237-885e-4352b20b128b))
     (pin "2" (uuid b5b12f30-71a8-40ae-8d35-b0965be82061))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "R4") (unit 1)
         )
@@ -2230,7 +2208,7 @@
           (reference "U1") (unit 1)
         )
       )
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "U7") (unit 1)
         )
@@ -2260,9 +2238,40 @@
           (reference "#PWR06") (unit 1)
         )
       )
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR035") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Minor_Industries:SNES_Controller_Socket") (at 262.89 92.71 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid b95f9a79-83f4-4096-9db6-674ae87e657d)
+    (property "Reference" "J5" (at 266.7 90.8051 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "SNES_Controller_Socket" (at 274.32 102.87 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Nintendo:SNES_Controller_Socket" (at 251.46 91.44 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 251.46 91.44 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 187001bd-790c-47dd-8b50-89fb424d9a87))
+    (pin "2" (uuid 1a6fcdf7-6c38-4440-8c60-c1408676591e))
+    (pin "3" (uuid fac6ce6c-9b35-4857-98df-149643b52543))
+    (pin "4" (uuid 6aef4921-e87a-497f-9681-3c7e891a1a85))
+    (pin "5" (uuid e6d37ac4-60da-4f27-bf71-4d283176713a))
+    (pin "6" (uuid fcff5f99-e986-45be-a839-cd12b8b426f7))
+    (pin "7" (uuid 27f76b67-1450-4203-9ef5-6e753b406c88))
+    (instances
+      (project "snes-controller-v1"
+        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
+          (reference "J5") (unit 1)
         )
       )
     )
@@ -2285,7 +2294,7 @@
     )
     (pin "1" (uuid 72584e23-5601-42a7-8e89-cf8bf650b628))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR017") (unit 1)
         )
@@ -2316,7 +2325,7 @@
           (reference "C5") (unit 1)
         )
       )
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "C4") (unit 1)
         )
@@ -2345,9 +2354,34 @@
           (reference "H1") (unit 1)
         )
       )
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "H1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 256.54 104.14 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid cdf2e75e-2559-4889-8bdc-d6e6bc872831)
+    (property "Reference" "#PWR015" (at 250.19 104.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 252.73 104.14 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "" (at 256.54 104.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 256.54 104.14 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid a45e201b-01a5-4c0c-9122-3bd6ff03713a))
+    (instances
+      (project "snes-controller-v1"
+        (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
+          (reference "#PWR015") (unit 1)
         )
       )
     )
@@ -2371,7 +2405,7 @@
     (pin "1" (uuid cfa8599a-33f6-41c4-b4d1-0beeb1ff1998))
     (pin "2" (uuid acd9e29f-6eca-4307-9d69-818331797e04))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "C8") (unit 1)
         )
@@ -2396,7 +2430,7 @@
     )
     (pin "1" (uuid ee269cb9-4092-4463-b792-fd49fd7688a3))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR08") (unit 1)
         )
@@ -2425,7 +2459,7 @@
           (reference "H4") (unit 1)
         )
       )
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "H3") (unit 1)
         )
@@ -2451,7 +2485,7 @@
     (pin "1" (uuid 49b2132b-d608-4178-bca1-1fbc8ec872de))
     (pin "2" (uuid c8946be1-d749-438f-b4b4-bd2124e20ff0))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "R3") (unit 1)
         )
@@ -2486,7 +2520,7 @@
           (reference "J3") (unit 1)
         )
       )
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "J1") (unit 1)
         )
@@ -2511,7 +2545,7 @@
     )
     (pin "1" (uuid 3aa22387-bd6b-4e44-a668-220178099978))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR018") (unit 1)
         )
@@ -2536,7 +2570,7 @@
     )
     (pin "1" (uuid cef8d9ee-e522-4575-af73-5c2154cc6d74))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR03") (unit 1)
         )
@@ -2562,7 +2596,7 @@
     (pin "1" (uuid 11b800c2-a195-4018-b687-bb5809e5ed92))
     (pin "2" (uuid 7e23ae07-2c7f-4f3e-9bca-1ed7f81f3f04))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "C2") (unit 1)
         )
@@ -2587,7 +2621,7 @@
     )
     (pin "1" (uuid a5d49e96-8f87-4f8a-af5f-6f2ac67df86f))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR019") (unit 1)
         )
@@ -2612,7 +2646,7 @@
     )
     (pin "1" (uuid 3ca8695b-5ab5-444d-a495-f6d2b411ecab))
     (instances
-      (project "nes-controller-v4"
+      (project "snes-controller-v1"
         (path "/eb34aa8d-b454-4de7-98a6-8535b6a0e862"
           (reference "#PWR011") (unit 1)
         )
